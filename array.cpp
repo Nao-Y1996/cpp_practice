@@ -8,12 +8,14 @@ using namespace std;
 int main(){
     const int n = 5;
     int array[n] = {1,2,3,4,5};
-    cout << "配列の最初の要素のアドレスを出力：" << &array[0] << endl;
-    cout << "配列名を出力：" << array << endl;
+    cout << "&array[0] = " << &array[0] << endl;
+    cout << "array = " << array << endl;
     cout << "---> 配列名は最初の要素のアドレスを表している！" << endl << endl;
 
     for (int i=0; i<n; i++){
+        cout << "&array[" << i << "] = " << &array[i] << endl;
         cout << "array+" << i << " = " << array+i << endl;
+        cout << "array[" << i << "] = " << array[i] << endl;
         cout << "*(array+" << i << ") = " << *(array+i) << endl;
     }
     cout << "---> 配列のある要素のアドレスに+1すると、次の要素のアドレスを表す！" << endl << endl;
